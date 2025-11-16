@@ -1,3 +1,4 @@
+Weather Data Analysis & Temperature Forecasting
 📌 Overview
 
 Performed detailed EDA on a real-world weather dataset to understand temperature trends, humidity relationships, seasonal patterns, and extreme weather events.
