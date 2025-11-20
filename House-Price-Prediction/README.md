@@ -104,16 +104,6 @@ This notebook represents a **professional-level ML regression pipeline**, suitab
 
 ---
 
-## 📂 **Project Structure**
-├── House_Price_Prediction.ipynb
-├── train.csv
-├── README.md
-└── images/
-├── residual_plot.png
-├── predicted_vs_actual.png
-└── feature_importance.png
-
-
 ---
 
 ## ⭐ **Technologies Used**
