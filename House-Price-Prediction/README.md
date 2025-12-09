@@ -1,118 +1,140 @@
-# 🏡 House Price Prediction — Advanced ML Regression Project
+🏡 House Price Prediction — Advanced ML Regression Project
 
-A complete end-to-end Machine Learning project built using the **Kaggle House Prices Dataset**.  
-This project demonstrates **data cleaning, feature engineering, encoding, modeling, evaluation, and interpretation** using multiple regression techniques.
+A complete end-to-end Machine Learning project built using the Ames House Prices Dataset.
+This project covers data cleaning, EDA, feature engineering, encoding, scaling, modeling, hyperparameter optimization, and interpretability.
 
----
+📌 Project Overview
 
-## 📌 **Project Overview**
-The goal of this project is to predict house sale prices using advanced regression algorithms.  
-We test four models:
+The goal of this project is to predict house sale prices using multiple regression algorithms.
 
-- Linear Regression  
-- Ridge Regression (RidgeCV)  
-- Lasso Regression (LassoCV)  
-- ElasticNet Regression (ElasticNetCV)
+Models tested:
 
-After evaluation, **Ridge Regression** is selected as the best-performing model.
+Linear Regression
 
----
+Ridge Regression (RidgeCV)
 
-## 📊 **Key Steps**
+Lasso Regression (LassoCV)
 
-### **1️⃣ Data Cleaning**
-- Handled missing values in basement, garage, masonry, alley, and other fields  
-- Fixed incorrect values  
-- Imputed LotFrontage using neighborhood median  
-- Filled missing categorical values with `"None"`  
+ElasticNet Regression (ElasticNetCV)
 
----
+Decision Tree Regressor
 
-### **2️⃣ Feature Engineering**
-Created meaningful new features such as:
+Random Forest Regressor
 
-- **Age of House**
-- **HouseAgeAtSale**
-- **Total Square Footage**
-- **Total Bathrooms**
-- **Total Porch Area**
-- **Total Rooms**
-- **SinceRemodel**
+XGBoost Regressor (Final Model)
 
-These features improved model performance significantly.
+📍 After comparing performance, XGBoost was selected as the best model.
 
----
+📊 Key Steps
+1️⃣ Data Cleaning
 
-### **3️⃣ Exploratory Data Analysis**
-Visualizations include:
+Handled missing values in garage, basement, masonry & alley fields
 
-- Price distribution  
-- Correlation heatmap  
-- GrLivArea vs SalePrice  
-- OverallQual vs SalePrice  
-- Outlier visualization  
+Replaced missing categorical data with "None"
 
----
+Filled LotFrontage using Neighborhood median
 
-### **4️⃣ Encoding**
-- Applied **ordinal encoding** to quality-based features  
-- Used **one-hot encoding** for remaining categorical variables  
+Fixed incorrect outlier value in KitchenAbvGr
 
----
+2️⃣ Feature Engineering
 
-### **5️⃣ Model Training & Evaluation**
-All models were wrapped in a **Pipeline** with StandardScaler.
+Generated strong new predictors including:
 
-Metrics used:
+TotalSquareFoot
 
-- **MAE (Mean Absolute Error)**  
-- **RMSE (Root Mean Squared Error)**  
-- **R² Score**
+TotalBathrooms
 
-📌 **Ridge Regression achieved the best RMSE and most stable coefficients.**
+TotalPorchSF
 
----
+TotalRooms
 
-## 📈 **Model Evaluation Plots**
+Age & HouseAgeAtSale
 
-### **🔹 Residual Plot**
-Shows residuals centered around zero → good fit.
+SinceRemodel
 
-### **🔹 Predicted vs Actual**
-Predictions closely follow the diagonal line → strong accuracy.
+These features improved predictive performance significantly.
 
-### **🔹 Top 20 Feature Importance**
-Most important features include:
+3️⃣ Exploratory Data Analysis
 
-- KitchenQual  
-- GarageCars  
-- BsmtExposure  
-- Total Square Footage  
-- 1stFlrSF  
-- GarageArea  
-- ExterQual  
+Key visual insights:
 
----
+Distribution of SalePrice
 
-## 🏁 **Conclusion**
-✔ Ridge Regression is the best model  
-✔ Strong predictive performance  
-✔ Excellent generalization  
-✔ Meaningful and interpretable features  
+Outlier checks: GrLivArea vs SalePrice
 
-This notebook represents a **professional-level ML regression pipeline**, suitable for real-world predictive modeling.
+Correlation heatmap
 
----
+OverallQual vs SalePrice
 
----
+4️⃣ Encoding & Scaling
 
-## ⭐ **Technologies Used**
-- Python
-- Pandas
-- NumPy
-- Seaborn
-- Matplotlib
-- Scikit-Learn
+Ordinal Encoding for quality rankings (Ex / Gd / TA / etc.)
 
----
+One-Hot Encoding for remaining categorical features
+
+Applied StandardScaler inside Pipeline
+
+5️⃣ Model Training & Evaluation
+
+Performance metrics used:
+
+MAE
+
+RMSE
+
+R² Score
+
+Results summary showed:
+
+Ridge/Lasso worked well for linear patterns
+
+Random Forest improved generalization
+
+XGBoost achieved the best RMSE & highest R² score
+
+📈 Model Evaluation Plots
+🔹 Residual Plot (XGBoost)
+
+Residuals centered around zero → model is unbiased.
+
+🔹 Predicted vs Actual Plot
+
+Strong alignment along diagonal → accurate predictions.
+
+🔹 Feature Importance Plot
+
+Top contributing features included:
+
+TotalSquareFoot
+
+GarageCars
+
+OverallQual
+
+1stFlrSF
+
+ExterQual
+
+🏁 Conclusion
+
+✔ XGBoost is the best regression model for this dataset
+✔ Excellent predictive power & generalization
+✔ Interpretability preserved using feature importance
+✔ Model ready for deployment (API / Streamlit)
+
+This notebook demonstrates a full-stack ML workflow, suitable for real industry ML projects.
+
+⭐ Technologies Used
+
+Python
+
+Pandas, NumPy
+
+Scikit-Learn
+
+XGBoost
+
+Matplotlib & Seaborn
+
+Jupyter / VS Code
 
