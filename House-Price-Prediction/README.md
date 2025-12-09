@@ -1,2 +1,86 @@
-# 🏡 House Price Prediction — Advanced ML Regression Project A complete end-to-end Machine Learning project built using the **Kaggle House Prices Dataset**. This project demonstrates **data cleaning, feature engineering, encoding, modeling, evaluation, and interpretation** using multiple regression techniques. --- ## 📌 **Project Overview** The goal of this project is to predict house sale prices using advanced regression algorithms. We test four models: - Linear Regression - Ridge Regression (RidgeCV) - Lasso Regression (LassoCV) - ElasticNet Regression (ElasticNetCV) After evaluation, **Ridge Regression** is selected as the best-performing model. --- ## 📊 **Key Steps** ### **1️⃣ Data Cleaning** - Handled missing values in basement, garage, masonry, alley, and other fields - Fixed incorrect values - Imputed LotFrontage using neighborhood median - Filled missing categorical values with "None" --- ### **2️⃣ Feature Engineering** Created meaningful new features such as: - **Age of House** - **HouseAgeAtSale** - **Total Square Footage** - **Total Bathrooms** - **Total Porch Area** - **Total Rooms** - **SinceRemodel** These features improved model performance significantly. --- ### **3️⃣ Exploratory Data Analysis** Visualizations include: - Price distribution - Correlation heatmap - GrLivArea vs SalePrice - OverallQual vs SalePrice - Outlier visualization --- ### **4️⃣ Encoding** - Applied **ordinal encoding** to quality-based features - Used **one-hot encoding** for remaining categorical variables --- ### **5️⃣ Model Training & Evaluation** All models were wrapped in a **Pipeline** with StandardScaler. Metrics used: - **MAE (Mean Absolute Error)** - **RMSE (Root Mean Squared Error)** - **R² Score** 📌 **Ridge Regression achieved the best RMSE and most stable coefficients.** --- ## 📈 **Model Evaluation Plots** ### **🔹 Residual Plot** Shows residuals centered around zero → good fit. ### **🔹 Predicted vs Actual** Predictions closely follow the diagonal line → strong accuracy. ### **🔹 Top 20 Feature Importance** Most important features include: - KitchenQual - GarageCars - BsmtExposure - Total Square Footage - 1stFlrSF - GarageArea - ExterQual --- ## 🏁 **Conclusion** ✔ Ridge Regression is the best model ✔ Strong predictive performance ✔ Excellent generalization ✔ Meaningful and interpretable features This notebook represents a **professional-level ML regression pipeline**, suitable for real-world predictive modeling. --- --- ## ⭐ **Technologies Used** - Python - Pandas - NumPy - Seaborn - Matplotlib - Scikit-Learn ---
+# 🏡 House Price Prediction — Regression Project
+
+## 📌 Overview
+A complete Machine Learning project using the Ames Housing dataset to predict house prices using advanced regression models.
+
+---
+
+## 📂 Dataset
+Ames Housing Dataset from Kaggle containing detailed property features and sale prices.
+
+---
+
+## 🧹 Data Cleaning
+- Handled missing numerical and categorical values
+- Imputed LotFrontage using Neighborhood median
+- Replaced missing feature categories with "None"
+- Fixed incorrect kitchen value
+- Outlier handling using visualization
+
+---
+
+## 🏗 Feature Engineering
+Created new predictive features:
+- TotalSquareFoot
+- TotalBathrooms
+- TotalPorchSF
+- TotalRooms
+- Age and HouseAgeAtSale
+- SinceRemodel
+
+These features improved model accuracy significantly.
+
+---
+
+## 📊 Exploratory Data Analysis
+- Distribution of SalePrice
+- Correlation Heatmap
+- Outlier detection using GrLivArea vs SalePrice
+- OverallQual vs SalePrice visualization
+
+---
+
+## 🤖 Models Used
+- Linear Regression
+- Ridge Regression
+- Lasso Regression
+- ElasticNet Regression
+- Decision Tree Regressor
+- Random Forest Regressor
+- **XGBoost Regressor** (Selected Best Model)
+
+---
+
+## 📈 Model Evaluation
+Evaluation Metrics:
+- MAE
+- RMSE
+- R² Score
+
+📌 XGBoost showed the highest prediction performance and lowest error.
+
+---
+
+## 🔍 Model Insights
+- Residuals centered near zero → good stability
+- Predicted vs Actual follows diagonal → strong accuracy
+- Feature Importance highlights:
+  - TotalSquareFoot
+  - GarageCars
+  - OverallQual
+  - 1stFlrSF
+  - ExterQual
+
+---
+
+## 🏁 Conclusion
+✔ XGBoost chosen as final model  
+✔ High accuracy on unseen data  
+✔ Model ready for real-world deployment  
+
+---
+
+## 🛠 Technologies Used
+Python, Pandas, NumPy, Scikit-Learn, XGBoost, Matplotlib, Seaborn, Jupyter Notebook / VS Code
+
 
